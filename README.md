@@ -47,13 +47,13 @@ We used the following Providers for this workshop:
 
 We used the following AWS-specific Data Sources and Resources for this workshop:
 
+* Data Source `aws_vpc`: [terraform.io/docs/providers/aws/d/vpc.html](https://www.terraform.io/docs/providers/aws/d/vpc.html)
+* Resource `aws_security_group`: [terraform.io/docs/providers/aws/r/security_group.html](https://www.terraform.io/docs/providers/aws/r/security_group.html)
+* Resource `aws_security_group_rule`: [terraform.io/docs/providers/aws/r/security_group_rule.html](https://www.terraform.io/docs/providers/aws/r/security_group_rule.html)
+* Resource `aws_key_pair`: [terraform.io/docs/providers/aws/r/key_pair.html](https://www.terraform.io/docs/providers/aws/r/key_pair.html)
 * Resource `aws_instance`: [terraform.io/docs/providers/aws/r/instance.html](https://www.terraform.io/docs/providers/aws/r/instance.html)
 * Resource `aws_ebs_volume`: [terraform.io/docs/providers/aws/r/ebs_volume.html](https://www.terraform.io/docs/providers/aws/r/ebs_volume.html)
-* Resource `aws_volume_attachment` resource can be found on [terraform.io/docs/providers/aws/r/volume_attachment.html](https://www.terraform.io/docs/providers/aws/r/volume_attachment.html)
-* Resource `aws_security_group_rule`: [terraform.io/docs/providers/aws/r/security_group_rule.html](https://www.terraform.io/docs/providers/aws/r/security_group_rule.html)
-* Resource `aws_security_group`: [terraform.io/docs/providers/aws/r/security_group.html](https://www.terraform.io/docs/providers/aws/r/security_group.html)
-* Resource `aws_key_pair`: [terraform.io/docs/providers/aws/r/key_pair.html](https://www.terraform.io/docs/providers/aws/r/key_pair.html)
-* Data Source `aws_vpc`: [terraform.io/docs/providers/aws/d/vpc.html](https://www.terraform.io/docs/providers/aws/d/vpc.html)
+* Resource `aws_volume_attachment`: [terraform.io/docs/providers/aws/r/volume_attachment.html](https://www.terraform.io/docs/providers/aws/r/volume_attachment.html)
 
 ### Other Terraform Resources
 
