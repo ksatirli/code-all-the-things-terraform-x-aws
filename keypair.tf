@@ -16,8 +16,8 @@ resource "aws_key_pair" "hack_the_ne" {
 
 // render Private Key part of SSH Key as a local file
 resource "local_file" "private_ssh_key" {
-  content         = tls_private_key.hack_the_ne.private_key_pem
-  filename        = "${path.module}/${var.ssh_key_file}"
+  content  = tls_private_key.hack_the_ne.private_key_pem
+  filename = "${path.module}/${var.ssh_key_file}"
 
   // set correct permissions on Private Key file
   file_permission = "0644"
