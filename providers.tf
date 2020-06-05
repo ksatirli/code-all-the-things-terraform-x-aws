@@ -1,5 +1,9 @@
-provider "aws" {
+provider "tls" {
   version = "~> 2.1"
+}
+
+provider "local" {
+  version = "~> 1.4.0"
 }
 
 provider "aws" {
