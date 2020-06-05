@@ -12,6 +12,7 @@
       - [Providers for Terraform](#providers-for-terraform)
       - [AWS-specific Terraform Resources](#aws-specific-terraform-resources)
       - [Other Terraform Resources](#other-terraform-resources)
+      - [Outputs](#outputs)
   - [Next Steps](#next-steps)
       - [Code Quality](#code-quality)
       - [Modules](#modules)
@@ -54,6 +55,7 @@ We used the following AWS-specific Data Sources and Resources for this workshop:
 * Resource `aws_instance`: [terraform.io/docs/providers/aws/r/instance.html](https://www.terraform.io/docs/providers/aws/r/instance.html)
 * Resource `aws_ebs_volume`: [terraform.io/docs/providers/aws/r/ebs_volume.html](https://www.terraform.io/docs/providers/aws/r/ebs_volume.html)
 * Resource `aws_volume_attachment`: [terraform.io/docs/providers/aws/r/volume_attachment.html](https://www.terraform.io/docs/providers/aws/r/volume_attachment.html)
+* Resource `aws_s3_bucket` [terraform.io/docs/providers/aws/r/s3_bucket.html](https://www.terraform.io/docs/providers/aws/r/s3_bucket.html)
 
 ### Other Terraform Resources
 
@@ -62,6 +64,29 @@ We used the following Data Sources and Resources for this workshop:
 * Resource `tls_private_key`: [terraform.io/docs/providers/tls/r/private_key.html](https://www.terraform.io/docs/providers/tls/r/private_key.html)
 * Resource `local_file`: [terraform.io/docs/providers/local/r/file.html](https://www.terraform.io/docs/providers/local/r/file.html)
 * Data Source `http`: [terraform.io/docs/providers/http/data_source.html](https://www.terraform.io/docs/providers/http/data_source.html)
+
+### Outputs
+
+After running `terraform plan -out=aws.tfplan` and `terraform apply aws.tfplan`, you will have two resources:
+
+* an EC2 Instance (see [AWS Console](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1))
+* an S3 Bucket with Website Hosting (see [AWS Console](https://console.aws.amazon.com/s3/home?region=us-east-1))
+
+For both of these, we have created [Terraform Outputs](https://www.terraform.io/docs/configuration/outputs.html) that can be retrevied using the [output Command](https://www.terraform.io/docs/commands/output.html):
+
+```sh
+# show all outputs
+terraform output
+
+# show SSH connection string for EC2 Instance
+terraform output ssh_connection_string
+
+# show Website Endpoint for S3 Bucket
+terraform output website_url
+```
+
+* The SSH Connection String can be used to connect to your EC2 Instance. This uses the `ec2-ssh-key.pem` file.
+* The Website Endpoint can be used to view S3-Bucket hosted website files for static websites.=
 
 ## Next Steps
 
