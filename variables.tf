@@ -16,3 +16,15 @@ variable "availability_zone" {
   description = "Availability Zone to use"
   default     = "us-east-1a"
 }
+
+variable "ssh_key_file" {
+  type        = string
+  description = "SSH Key file name"
+  default     = "ec2-ssh-key.pem"
+}
+
+// get your public IP address by querying ICHI
+data "http" "icanhazip" {
+  // this value will be available in data.http.icanhazip.body
+  url = "https://icanhazip.com/"
+}
