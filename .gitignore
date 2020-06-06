@@ -1,5 +1,18 @@
-**/.terraform/
-**/*.tfstate*
-**/*.tfstate.*
-**/.tfplan*
+# Created by https://www.toptal.com/developers/gitignore/api/terraform
 
+### Terraform ###
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# .tfplan files
+*.tfplan
+
+# Crash log files
+crash.log
+
+### SSH Keys ###
+*.pem
