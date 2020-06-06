@@ -6,6 +6,7 @@
 
 - [Code all the Things: Terraform x AWS](#code-all-the-things-terraform-x-aws)
   - [Table of Contents](#table-of-contents)
+  - [Prerequisites](#prerequisites)
   - [Reading material](#reading-material)
     - [HashiCorp Configuration Language](#hashicorp-configuration-language)
   - [First Steps](#first-steps)
@@ -19,6 +20,13 @@
   - [Author Information](#author-information)
   - [License](#license)
 
+## Prerequisites
+
+As part of this workshop, you will be using [HashiCorp Terraform](https://www.terraform.io) and [Amazon Web Services](https://aws.amazon.com).
+
+For instructions on how to install Terraform. please see our [Learn Guide](https://learn.hashicorp.com/terraform/getting-started/install.html).
+
+On that page, you will find instructions for macOS (using `brew`), Windows (using `choco`) as well as a manual installation path.
 ## Reading material
 
 This section is a collection of links that will help you make the most of today's session.
